@@ -1,0 +1,29 @@
+-- Apaga o banco antigo se existir para começar do zero e evitar erros
+DROP DATABASE IF EXISTS deposito_db;
+
+-- Cria o banco de dados
+CREATE DATABASE deposito_db;
+
+-- Seleciona o banco para uso
+USE deposito_db;
+
+-- Cria a tabela de Fornecedores
+CREATE TABLE fornecedores (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    telefone VARCHAR(20),
+    email VARCHAR(100)
+);
+
+-- Cria a tabela de Produtos já conectada com Fornecedores
+CREATE TABLE produtos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    quantidade INT NOT NULL,
+    preco DECIMAL(10, 2) NOT NULL,
+    fornecedor_id INT,
+    CONSTRAINT fk_fornecedor FOREIGN KEY (fornecedor_id) REFERENCES fornecedores(id)
+);
+
+-- Insere um fornecedor de teste para você não começar vazio
+INSERT INTO fornecedores (nome, telefone, email) VALUES ('Fornecedor Padrão', '0000-0000', 'contato@loja.com');
