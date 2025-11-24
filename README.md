@@ -61,6 +61,11 @@ O projeto segue o padrão de arquitetura em camadas:
 - **entity:** Classes de modelo (POJO).
 - **config:** Configurações de conexão.
 
-## 👨‍💻 Autor
+## 👨‍💻 Autores
 
-Desenvolvido por **Lucas** como parte da avaliação acadêmica.
+Desenvolvido por:
+**Lucas Fernandes Affonso - 12624210495**
+**Gabriel Dias de Oliveira - 12622121759**
+**Bruno Werther Marangoni Abreu - 12622113501**
+**Fernando Barbosa Ferreira - 1262216504**
+**Pedro Magno Martins Azevedo - 1262225669**
