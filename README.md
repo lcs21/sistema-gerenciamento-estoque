@@ -39,6 +39,7 @@ Antes de começar, você precisará ter instalado em sua máquina:
    ```
 
 2. **Configure o Banco de Dados:**
+   - Adicione o mysql connector no Project Structure/modules/dependencies da sua IDE.
    - Abra seu gerenciador de banco de dados (phpMyAdmin, MySQL Workbench, DBeaver).
    - Crie um novo banco de dados ou execute o script SQL incluído no projeto:
      - Arquivo: `deposito_db - SQL` (localizado na raiz do projeto).
