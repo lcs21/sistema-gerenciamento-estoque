@@ -105,6 +105,8 @@ public class Main {
                     aguardarRetorno(scanner);
                     break;
                 case 3:
+                    System.out.println("\n--- Produtos Cadastrados ---");
+                    estoqueService.listarProdutos();
                     System.out.println("\n--- Atualizar Produto ---");
                     System.out.print("ID do produto: ");
                     if (scanner.hasNextInt()) {
