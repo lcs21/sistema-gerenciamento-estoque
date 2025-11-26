@@ -134,6 +134,8 @@ public class Main {
                     aguardarRetorno(scanner);
                     break;
                 case 5:
+                    System.out.println("\n--- Produtos Cadastrados ---");
+                    estoqueService.listarProdutos();
                     System.out.println("\n--- Remover Produto ---");
                     System.out.print("ID para remover: ");
                     if (scanner.hasNextInt()) {
