@@ -112,6 +112,14 @@ public class Main {
                     if (scanner.hasNextInt()) {
                         int idAt = scanner.nextInt();
                         scanner.nextLine();
+
+                        // Verifica se o produto existe
+                        if (!estoqueService.produtoExiste(idAt)) {
+                            System.out.println("ID inválido. Produto não encontrado.");
+                            aguardarRetorno(scanner);
+                            break;
+                        }
+
                         System.out.print("Novo Nome: ");
                         String nNome = scanner.nextLine();
                         System.out.print("Nova Qtd: ");
@@ -134,8 +142,6 @@ public class Main {
                     aguardarRetorno(scanner);
                     break;
                 case 5:
-                    System.out.println("\n--- Produtos Cadastrados ---");
-                    estoqueService.listarProdutos();
                     System.out.println("\n--- Remover Produto ---");
                     System.out.print("ID para remover: ");
                     if (scanner.hasNextInt()) {

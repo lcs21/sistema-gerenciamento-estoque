@@ -61,6 +61,13 @@ public class EstoqueService {
         System.out.println("Produto cadastrado com sucesso!");
     }
 
+    public boolean produtoExiste(int id) {
+        for (Produto p : produtoDAO.listarTodos()) {
+            if (p.getId() == id) return true;
+        }
+        return false;
+    }
+
     public void listarProdutos() {
         List<Produto> lista = produtoDAO.listarTodos();
         if (lista.isEmpty()) {
